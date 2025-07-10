@@ -1,0 +1,30 @@
+{
+	"name": "rucsbot-ts",
+	"module": "src/index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"start": "bun .",
+		"dev": "bun --hot .",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"prepare": "husky && husky install"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.6",
+		"@types/bun": "latest",
+		"@types/pg": "^8.15.4",
+		"husky": "^8.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"chalk": "^5.4.1",
+		"discord.js": "^14.21.0",
+		"pg": "^8.16.3"
+	},
+	"include": [
+		"src"
+	]
+}
