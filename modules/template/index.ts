@@ -25,7 +25,7 @@ client.on(Events.MessageCreate, async (msg) => {
 				name: `${msg.author.displayName} meows`,
 				iconURL: msg.author.displayAvatarURL(),
 			})
-			.setImage("https://cataas.com/cat")
+			.setImage(`https://cataas.com/cat?_=${Math.random()}`)
 			.setFooter({ text: `You have ran this command ${meowCount} times.` });
 		msg.channel.send({ embeds: [embed] });
 	}
