@@ -1,6 +1,6 @@
 # RUCS Typescript Discord bot
 
-This is the Typescript Discord bot for RUCS.
+This is the Typescript Discord bot for RUCS, written in [Discord.JS](https://discord.js.org) (<https://discord.js.org>).
 
 ## Contributing
 
@@ -17,6 +17,8 @@ This bot is in the [RUCS Discord server](https://discord.gg/bdhQFrT5fD) (<https:
 ## Boilerplate template
 
 This is the boilerplate template you will need to use in the `index.js` or `index.ts` file in a folder in the `modules` folder.
+
+You can import `@/client` to access the Discord.JS client and `@/kv` for the key value database.
 
 ```ts
 import { Events } from "discord.js";
