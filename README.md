@@ -40,16 +40,14 @@ There is a built in key value storage for the database on this bot. It can only 
 
 > **Please start all your key names with your module name followed by a semi-colon.**
 
-### In memory vs PostgreSQL storage
+### SQLite vs PostgreSQL storage
 
-You can choose between using the in memory storage and PostgreSQL.
+You can choose between using the database [SQLite](https://www.sqlite.org) (<https://www.sqlite.org>) or [PostgreSQL](https://www.postgresql.org) (<https://www.postgresql.org>).
 
-The difference between the two is that all your data will be reset when you use the memory storage, but if you use PostgreSQL, the data will be persistent.
+For beginners, it'll be easier to use SQLite instead.
 
-You'll need to setup the PostgreSQL database by yourself to use it locally though.
-
-- If you want to use in memory storage, don't provide the `DATABASE_URL` value in `.env`.
-- If you want to use PostgreSQL, provide the proper connection url in the `DATABASE_URL` field in `.env`.
+- If you want to use SQLite, set `DATABASE_TYPE` to "`sqlite`" and `DATABASE_URI` to either "`:memory:`" or a file path in `.env`.
+- If you want to use PostgreSQL, set `DATABASE_TYPE` to "`postgresql`" and provide the proper connection url in the `DATABASE_URI` field in `.env`.
 
 ### Functions / methods
 
