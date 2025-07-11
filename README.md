@@ -75,6 +75,10 @@ Afterwards, you can run this to install dependencies:
 bun i
 ```
 
+Make sure to copy the `.env.example` file and rename it into `.env`.
+
+In `.env`, replace the "`YOUR_BOT_TOKEN`" text with your Discord bot token! You can obtain a Discord bot token in <https://discord.dev>.
+
 Then, you can use this following script to run the bot!
 
 ```bash
