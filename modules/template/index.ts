@@ -22,7 +22,7 @@ client.on(Events.MessageCreate, async (msg) => {
 		const embed = new EmbedBuilder()
 			.setColor("Random")
 			.setAuthor({
-				name: `${msg.author.displayName} meows`,
+				name: `${msg.author.displayName} meows!`,
 				iconURL: msg.author.displayAvatarURL(),
 			})
 			.setImage(`https://cataas.com/cat?_=${Math.random()}`)
