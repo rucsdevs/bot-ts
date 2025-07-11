@@ -18,7 +18,7 @@ export class SqliteStorage implements Storage {
 		if (typeof key !== "string") throw new Error("key must be a string");
 
 		const row = this.db
-			.query("SELECT value FROM kv_store WHERE key = ?")
+			.query("SELECT value FROM kv_store WHERE key=?")
 			.get(key) as { value: string } | null;
 		return row?.value ?? null;
 	}
@@ -61,16 +61,14 @@ export class SqliteStorage implements Storage {
 		if (typeof value !== "string") throw new Error("value must be a string");
 
 		this.db
-			.prepare(
-				"INSERT INTO kv_store (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value",
-			)
+			.prepare("REPLACE INTO kv_store (key, value) VALUES (?, ?)")
 			.run(key, value);
 	}
 
 	async delete(key: string): Promise<void> {
 		if (typeof key !== "string") throw new Error("key must be a string");
 
-		this.db.prepare("DELETE FROM kv_store WHERE key = ?").run(key);
+		this.db.prepare("DELETE FROM kv_store WHERE key=?").run(key);
 	}
 
 	async deleteMany(pattern: string): Promise<void> {
