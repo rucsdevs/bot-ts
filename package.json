@@ -11,13 +11,13 @@
 		"prepare": "husky && husky install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.6",
-		"@types/bun": "latest",
+		"@biomejs/biome": "2.1.1",
+		"@types/bun": "^1.2.18",
 		"@types/pg": "^8.15.4",
-		"husky": "^8.0.0"
+		"husky": "^9.1.7"
 	},
 	"peerDependencies": {
-		"typescript": "^5"
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
 		"chalk": "^5.4.1",
